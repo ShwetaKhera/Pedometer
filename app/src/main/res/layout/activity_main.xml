@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+            android:text="Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/male"
+            android:layout_toLeftOf="@+id/btn_stop"
+            android:layout_toStartOf="@+id/btn_stop"
+            android:id="@+id/female"
+            android:checked="false"/>
+
+        <TextView
+            android:text="Weight (kgs):"
+            android:layout_width="150dp"
+            android:layout_below="@+id/height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView2"
+            android:layout_height="40dp"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:layout_below="@+id/height"
+            android:layout_alignLeft="@+id/height"
+            android:layout_alignStart="@+id/height"
+            android:id="@+id/weight"
+            android:layout_alignBottom="@+id/textView2" />
+
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/height"
+            android:layout_below="@+id/female"
+            android:layout_toRightOf="@+id/female"
+            android:layout_toEndOf="@+id/female"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:text="Height (cms): "
+            android:layout_width="150dp"
+            android:id="@+id/textView"
+            android:layout_height="40dp"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_above="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:text="Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/male"
+            android:checked="false"
+            android:layout_marginBottom="84dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/female"
+            android:layout_toStartOf="@+id/female" />
+
+    <TextView
+        android:text="Calorie Burnt :"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/male"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/cal"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textColor="#fff"
+        android:background="#000"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:text="Distance :"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="17sp"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp" />
+
+    <TextView
+        android:text="No. of Steps :"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Stop Pedometer"
+        android:layout_above="@+id/tv_steps"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="18dp" />
+
+    <TextView
+            android:id="@+id/tv_steps"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:background="#000"
+            android:textColor="#fff"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignLeft="@+id/dist"
+        android:layout_alignStart="@+id/dist" />
+
+    <TextView
+        android:id="@+id/dist"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textColor="#fff"
+        android:background="#000"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignLeft="@+id/cal"
+        android:layout_alignStart="@+id/cal" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Start Pedometer"
+        android:layout_alignBaseline="@+id/btn_stop"
+        android:layout_alignBottom="@+id/btn_stop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Show my route"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/route"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/male"
+        android:layout_alignLeft="@+id/male"
+        android:layout_alignStart="@+id/male" />
+
+</RelativeLayout>
